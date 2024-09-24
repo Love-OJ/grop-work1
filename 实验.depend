@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1726927788 source:f:\实验\main.cpp
+	<bits/stdc++.h>
+	"SqList.h"
+
+1726927139 f:\实验\sqlist.h
+	<iostream>
+	<string>
+
+1726927504 source:f:\实验\sqlist.cpp
+	"SqList.h"
+
