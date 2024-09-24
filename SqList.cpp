@@ -6,7 +6,7 @@ void InitList(SqList *&L) {
     L->length = 0;
 }
 
-// 销毁顺序表
+// 销毁顺序表--xff写的
 void DestoryList(SqList *&L) {
     delete L;
     L = nullptr; // 避免悬空指针
