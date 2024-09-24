@@ -1,54 +1,53 @@
 #include "SqList.h"
 
-// ³õÊ¼»¯Ë³Ğò±í
+// åˆå§‹åŒ–é¡ºåºè¡¨
 void InitList(SqList *&L) {
     L = new SqList;
     L->length = 0;
 }
 
-// Ïú»ÙË³Ğò±í
+// é”€æ¯é¡ºåºè¡¨
 void DestoryList(SqList *&L) {
     delete L;
-    L = nullptr; // ±ÜÃâĞü¿ÕÖ¸Õë
+    L = nullptr; // é¿å…æ‚¬ç©ºæŒ‡é’ˆ
 }
 
-// ²åÈëÕ¾µã
+// æ’å…¥ç«™ç‚¹
 void ListInsert(SqList *&L, int i, ElemType e) {
     if (L->length >= MaxSize || i < 1 || i > L->length + 1) {
-        std::cout << "ÊäÈëµÄÎ»ÖÃ²»ºÏ·¨,±¦±¦£¡" << std::endl;
+        std::cout << "è¾“å…¥çš„ä½ç½®ä¸åˆæ³•,å®å®ï¼" << std::endl;
         return;
     }
     for (int j = L->length; j >= i; j--) {
         L->data[j] = L->data[j - 1];
     }
-    L->data[i - 1] = e; // ²åÈëĞÂÔªËØ
+    L->data[i - 1] = e; // æ’å…¥æ–°å…ƒç´ 
     L->length++;
-    // Ö»ÔÚ²åÈëµÚÒ»¸öÕ¾µãÊ±Êä³ö
+    // åªåœ¨æ’å…¥ç¬¬ä¸€ä¸ªç«™ç‚¹æ—¶è¾“å‡º
 
 }
 
-// É¾³ıÕ¾µã
+// åˆ é™¤ç«™ç‚¹
 void ListDelete(SqList *&L, int i, ElemType &e) {
     if (i < 1 || i > L->length || L->length == 0) {
-        std::cout << "É¾³ıÎ»ÖÃ²»ºÏ·¨Äó±¦±¦£¡" << std::endl;
+        std::cout << "åˆ é™¤ä½ç½®ä¸åˆæ³•æå®å®ï¼" << std::endl;
         return;
     }
-    e = L->data[i - 1]; // ´æ´¢ÒªÉ¾³ıµÄÔªËØ
+    e = L->data[i - 1]; // å­˜å‚¨è¦åˆ é™¤çš„å…ƒç´ 
     for (int j = i; j < L->length; j++) {
         L->data[j - 1] = L->data[j];
     }
     L->length--;
-
 }
 // Function to display the list
 void DispList(SqList *&L) {
     if (L->length == 0) {
-        std::cout << "ÁĞ±íÎª¿Õ£¡" << std::endl; // Èç¹ûÁĞ±íÎª¿Õ£¬Êä³öÌáÊ¾ĞÅÏ¢
+        std::cout << "åˆ—è¡¨ä¸ºç©ºï¼" << std::endl; // å¦‚æœåˆ—è¡¨ä¸ºç©ºï¼Œè¾“å‡ºæç¤ºä¿¡æ¯
         return;
     }
 
     for (int i = 0; i < L->length; i++) {
-        std::cout << "Õ¾µãÃû³Æ: " << L->data[i].name << ", ¾àÀë: " << L->data[i].distance << std::endl;
+        std::cout << "ç«™ç‚¹åç§°: " << L->data[i].name << ", è·ç¦»: " << L->data[i].distance << std::endl;
     }
 }
 
