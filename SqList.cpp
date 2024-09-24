@@ -12,7 +12,7 @@ void DestoryList(SqList *&L) {
     L = nullptr; // 避免悬空指针
 }
 
-// 插入站点
+// 插入站点--syr写的
 void ListInsert(SqList *&L, int i, ElemType e) {
     if (L->length >= MaxSize || i < 1 || i > L->length + 1) {
         std::cout << "输入的位置不合法,宝宝！" << std::endl;
