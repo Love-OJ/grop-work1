@@ -5,57 +5,57 @@ using namespace std;
 
 int main() {
     SqList *busLine;
-    InitList(busLine); // È·±£ busLine ±»ÕıÈ·³õÊ¼»¯
+    InitList(busLine); // ç¡®ä¿ busLine è¢«æ­£ç¡®åˆå§‹åŒ–
 
-    Station station1 = {"É½¶«ÉÌÎñÖ°ÒµÑ§Ôº", 0};
+    Station station1 = {"å±±ä¸œå•†åŠ¡èŒä¸šå­¦é™¢", 0};
     ListInsert(busLine, 1, station1);
 
-    Station station2 = {"²®Ô´¿Æ¼¼", 15};
+    Station station2 = {"ä¼¯æºç§‘æŠ€", 15};
     ListInsert(busLine, 2, station2);
 
-    Station station3 = {"»ªºÍÃÀ·şÊÎ", 23};
+    Station station3 = {"åå’Œç¾æœé¥°", 23};
     ListInsert(busLine, 3, station3);
 
-    // ²åÈë¸ü¶àÕ¾µã
-    ListInsert(busLine, 4, {"Ì©ÀûÄ£¾ß", 78});
-    ListInsert(busLine, 5, {"ÂíÉ½", 5});
-    ListInsert(busLine, 6, {"ÄÏÕ¯", 74});
-    ListInsert(busLine, 7, {"Ö°ÒµÑ§ÔºÎ÷ÃÅ", 1});
-    ListInsert(busLine, 8, {"±±Õ«ÄÏÕ¾", 8});
-    ListInsert(busLine, 9, {"±±Õ«", 6});
-    ListInsert(busLine, 10, {"ÊÀ½çÉè¼Æ¹«Ô°", 50});
-    ListInsert(busLine, 11, {"ÑÌÌ¨×ÔÈ»²©Îï¹İ", 41});
-    ListInsert(busLine, 12, {"¶«²®×Ó", 23});
-    ListInsert(busLine, 13, {"Î÷²®×Ó", 52});
-    ListInsert(busLine, 14, {"ÌìÔÃÍåĞ¡Çø¶«ÃÅ", 42});
-    ListInsert(busLine, 15, {"ÌìÔÃÍåĞ¡ÇøÄÏÃÅ", 75});
-    ListInsert(busLine, 16, {"ÑÌÌ¨Àí¹¤Ñ§Ôº", 6});
-    ListInsert(busLine, 17, {"ÏğÊ÷Íå", 20});
+    // æ’å…¥æ›´å¤šç«™ç‚¹
+    ListInsert(busLine, 4, {"æ³°åˆ©æ¨¡å…·", 78});
+    ListInsert(busLine, 5, {"é©¬å±±", 5});
+    ListInsert(busLine, 6, {"å—å¯¨", 74});
+    ListInsert(busLine, 7, {"èŒä¸šå­¦é™¢è¥¿é—¨", 1});
+    ListInsert(busLine, 8, {"åŒ—æ–‹å—ç«™", 8});
+    ListInsert(busLine, 9, {"åŒ—æ–‹", 6});
+    ListInsert(busLine, 10, {"ä¸–ç•Œè®¾è®¡å…¬å›­", 50});
+    ListInsert(busLine, 11, {"çƒŸå°è‡ªç„¶åšç‰©é¦†", 41});
+    ListInsert(busLine, 12, {"ä¸œä¼¯å­", 23});
+    ListInsert(busLine, 13, {"è¥¿ä¼¯å­", 52});
+    ListInsert(busLine, 14, {"å¤©æ‚¦æ¹¾å°åŒºä¸œé—¨", 42});
+    ListInsert(busLine, 15, {"å¤©æ‚¦æ¹¾å°åŒºå—é—¨", 75});
+    ListInsert(busLine, 16, {"çƒŸå°ç†å·¥å­¦é™¢", 6});
+    ListInsert(busLine, 17, {"æ©¡æ ‘æ¹¾", 20});
 
-    cout << "¹«½»ÏßÂ·µÄÕ¾µã: " << endl;
+    cout << "å…¬äº¤çº¿è·¯çš„ç«™ç‚¹: " << endl;
     DispList(busLine);
 
     cout << endl;
 
-    Station station18 = {"¹ú¼Ê²©ÀÀÖĞĞÄ", 20};
+    Station station18 = {"å›½é™…åšè§ˆä¸­å¿ƒ", 20};
     ListInsert(busLine, 18, station18);
 
-    // Êä³öĞÂÔöµÄÕ¾µãµÄÃû×ÖºÍ¾àÀë
-    cout << "ĞÂÔöµÄÕ¾µã: " << station18.name << ", ¾àÀë: " << station18.distance << endl;
+    // è¾“å‡ºæ–°å¢çš„ç«™ç‚¹çš„åå­—å’Œè·ç¦»
+    cout << "æ–°å¢çš„ç«™ç‚¹: " << station18.name << ", è·ç¦»: " << station18.distance << endl;
 
-   // cout << "Ôö¼ÓºóµÄ¹«½»ÏßÂ·µÄÕ¾µã: " << endl;
+   // cout << "å¢åŠ åçš„å…¬äº¤çº¿è·¯çš„ç«™ç‚¹: " << endl;
    // DispList(busLine);
 
     Station deletedStation;
-    ListDelete(busLine, 2, deletedStation); // É¾³ıµÚ¶ş¸öÕ¾µã
+    ListDelete(busLine, 2, deletedStation); // åˆ é™¤ç¬¬äºŒä¸ªç«™ç‚¹
 
-    // Êä³öÉ¾³ıµÄÕ¾µãµÄÃû×ÖºÍ¾àÀë
-    cout << "É¾³ıµÄÕ¾µã: " << deletedStation.name << ", ¾àÀë: " << deletedStation.distance << endl;
+    // è¾“å‡ºåˆ é™¤çš„ç«™ç‚¹çš„åå­—å’Œè·ç¦»
+    cout << "åˆ é™¤çš„ç«™ç‚¹: " << deletedStation.name << ", è·ç¦»: " << deletedStation.distance << endl;
 
-   // cout << "É¾³ıºóµÄ¹«½»ÏßÂ·µÄÕ¾µã: " << endl;
-  //  DispList(busLine);
+   // cout << "åˆ é™¤åçš„å…¬äº¤çº¿è·¯çš„ç«™ç‚¹: " << endl;
+   //  DispList(busLine);
 
-    DestoryList(busLine); // È·±£º¯ÊıÃûÆ´Ğ´ÕıÈ·
+    DestoryList(busLine); // ç¡®ä¿å‡½æ•°åæ‹¼å†™æ­£ç¡®
 
     return 0;
 }
