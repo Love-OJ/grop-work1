@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1727246473 source:f:\实验2\listlink\linklist.cpp
+	"LinkList.h"
+
+1727247236 f:\实验2\listlink\linklist.h
+	<iostream>
+	<string>
+
+1727247213 source:f:\实验2\listlink\main.cpp
+	<iostream>
+	"LinkList.h"
+
